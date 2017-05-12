@@ -1,0 +1,40 @@
+{	"extensionName":"Extension RFID Grove",
+	"description":"Lecture de badges RFID",
+	"version": "1.0",
+	"author":"Paul Coiffier (coiffier.paul@gmail.com)",
+	"homepage":"https://github.com/paulcoiffier",
+	"sort":0,
+	"javascriptURL":"js/rfid_extension.js",
+	"firmware":"1.0",
+	"extensionPort":0,
+	"blockSpecs": [
+		["R", "Lire la valeur du lecteur RFID sur la broche %m.digitalPort", "rfidRead", "D2",
+			{
+				"setup": "",
+				"inc": "#include \"RFIDLIB.h\"\n",
+				"def": "",
+				"work": "getValueRFID({0})",
+				"loop": ""
+			}
+		]
+	],
+	"menus": {
+		"digital": ["HIGH", "LOW"],
+		"digitalPort": ["D2", "D3", "D4", "D5", "D6", "D7", "D8"]
+	},
+	"values": {
+		"HIGH": 1,
+		"LOW": 0,
+		"D2": 2,
+		"D3": 3,
+		"D4": 4,
+		"D5": 5,
+		"D6": 6,
+		"D7": 7,
+		"D8": 8,
+		"A0": 0,
+		"A1": 1,
+		"A2": 2,
+		"A3": 3
+	}
+}
